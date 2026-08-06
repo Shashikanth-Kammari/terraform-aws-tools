@@ -2,11 +2,11 @@
 data "aws_ami" "ami_info" {
 
     most_recent = true
-    owners = ["973714476881"]
+    owners = ["620549678005"]
 
     filter {
         name   = "name"
-        values = ["RHEL-9-DevOps-Practice"]
+        values = ["Devops"]
     }
 
     filter {
@@ -20,23 +20,23 @@ data "aws_ami" "ami_info" {
     }
 }
 
-data "aws_ami" "nexus_ami_info" {
+# data "aws_ami" "nexus_ami_info" {
 
-    most_recent = true
-    owners = ["679593333241"]
+#     most_recent = true
+#     owners = ["679593333241"]
 
-    filter {
-        name   = "name"
-        values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20240511-*"]
-    }
+#     filter {
+#         name   = "name"
+#         values = ["SolveDevOps-Nexus-Server-Ubuntu20.04-20240511-*"]
+#     }
 
-    filter {
-        name   = "root-device-type"
-        values = ["ebs"]
-    }
+#     filter {
+#         name   = "root-device-type"
+#         values = ["ebs"]
+#     }
 
-    filter {
-        name   = "virtualization-type"
-        values = ["hvm"]
-    }
-}
+#     filter {
+#         name   = "virtualization-type"
+#         values = ["hvm"]
+#     }
+# }
