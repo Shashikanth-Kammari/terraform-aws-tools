@@ -2,7 +2,7 @@ module "jenkins" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
   name = "jenkins-tf"
-
+  key_name = aws_key_pair.tools.key_name
   instance_type          = "t3.small"
   vpc_security_group_ids = ["sg-0fea5e49e962e81c9"] #replace your SG
   subnet_id = "subnet-0ea509ad4cba242d7" #replace your Subnet
@@ -19,6 +19,7 @@ module "jenkins_agent" {
   name = "jenkins-agent"
 
   instance_type          = "t3.small"
+  key_name = aws_key_pair.tools.key_name
   vpc_security_group_ids = ["sg-0fea5e49e962e81c9"]
   # convert StringList to list and get first element
   subnet_id = "subnet-0ea509ad4cba242d7"
