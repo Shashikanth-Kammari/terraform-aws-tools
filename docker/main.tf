@@ -1,4 +1,4 @@
-module "jenkins" {
+module "docker" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
   name = "docker"
