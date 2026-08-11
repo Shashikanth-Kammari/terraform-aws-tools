@@ -6,7 +6,7 @@ data "aws_ami" "ami_info" {
 
     filter {
         name   = "name"
-        values = ["Devops"]
+        values = ["devops"]
     }
 
     filter {
