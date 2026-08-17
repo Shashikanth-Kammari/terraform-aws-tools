@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "removing the docker if have it "
+
 sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
