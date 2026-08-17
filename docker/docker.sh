@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "removing the docker if have it "
 sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
@@ -10,9 +10,12 @@ sudo dnf remove docker \
                   docker-engine \
                   podman \
                   runc
+echo "successfully uninstalled docker"
 
+echo "installing plugins"
 sudo dnf -y install dnf-plugins-core
 
+echo "downloading docker repo "
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
