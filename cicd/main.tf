@@ -18,7 +18,7 @@ module "jenkins_agent" {
 
   name = "jenkins-agent"
 
-  instance_type          = "t3.small"
+  instance_type          = "t3.micro"
   vpc_security_group_ids = ["sg-0fea5e49e962e81c9"]
   # convert StringList to list and get first element
   subnet_id = "subnet-0ea509ad4cba242d7"
