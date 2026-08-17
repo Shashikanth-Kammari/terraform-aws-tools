@@ -10,7 +10,7 @@ sudo dnf remove docker \
                   docker-engine \
                   podman \
                   runc
-echo "successfully uninstalled docker"
+
 
 
 sudo dnf -y install dnf-plugins-core
