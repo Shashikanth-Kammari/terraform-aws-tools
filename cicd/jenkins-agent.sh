@@ -9,7 +9,7 @@ dnf module enable nodejs:20 -y
 dnf install nodejs -y
 yum install zip -y
 
-# docker
+# docker installation
 sudo dnf remove docker \
                   docker-client \
                   docker-client-latest \
